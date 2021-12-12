@@ -1,0 +1,97 @@
+/* Variables */
+$purple600: #9333ea;
+$purple700: #7e22ce;
+$purple800: #6b21a8;
+
+/* Mixins */
+@mixin text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+@mixin text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+@mixin text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+@mixin text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+@mixin text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}
+@mixin text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+}
+
+/* Article */
+.article {
+    /* Base */
+    p {
+        @include text-base;
+        padding-top: 0.125rem;
+        padding-bottom: 0.125rem;
+    }
+
+    a {
+        color: $purple600;
+        &:hover {
+            color: $purple800;
+        }
+    }
+
+    /* Titles */
+    h1 {
+        @include text-2xl;
+        margin-top: 0.5rem;
+        font-weight: bold;
+    }
+    h2 {
+        @include text-xl;
+        margin-top: 0.5rem;
+        font-weight: bold;
+    }
+    h3 {
+        @include text-lg;
+        margin-top: 0.5rem;
+        font-weight: bold;
+    }
+    h4, h5, h6 {
+        @include text-base;
+        margin-top: 0.5rem;
+        font-weight: bold;
+    }
+
+    /* Lists */
+    ul, ol {
+        list-style-type: disc;
+        margin: revert;
+        padding-left: 1.25rem;
+    }
+    
+    ol {
+        list-style-type: decimal;
+    }
+
+    .aligncenter {
+        margin: 0 auto;
+    }
+
+
+    blockquote {}
+
+    .wp-caption {    
+        display: block;
+        max-width: 100%;
+
+        .wp-caption-text {
+            text-align: center;
+            font-style: italic;
+        }
+    }
+}
